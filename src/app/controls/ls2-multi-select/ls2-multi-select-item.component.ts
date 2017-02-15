@@ -15,7 +15,7 @@ export class Ls2MultiSelectItemComponent {
   dataItem: any;
 
   @Input()
-  isSelected: boolean;
+  isSelected: boolean = false;
 
   @Output()
   isSelectedChanged = new EventEmitter<boolean>();

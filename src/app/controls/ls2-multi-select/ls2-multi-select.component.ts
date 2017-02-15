@@ -35,4 +35,8 @@ export class Ls2MultiSelectComponent {
   private get firstViewItems(): any[] {
     return this.itemsSource.slice(0, this.maxDepth);
   }
+
+  private get restViewItems(): any[] {
+    return this.itemsSource.slice(this.maxDepth);
+  }
 }

@@ -1,5 +1,3 @@
-<div>
-  <button (click)="selecttionChanged($event)">
+<button type="button" (click)="selecttionChanged($event)" [ngClass]="{'btn form-control': true, 'btn-primary' : isSelected, 'btn-default' : !isSelected}">
     {{dataItem[parent.displayMemberPath]}}
-  </button>
-</div>
+</button>

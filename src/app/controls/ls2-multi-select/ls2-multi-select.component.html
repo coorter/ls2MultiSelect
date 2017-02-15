@@ -1,4 +1,15 @@
-<p>
-  <ls2-multi-select-item *ngFor="let item of firstViewItems" [dataItem]="item">
-  </ls2-multi-select-item>
-</p>
+<div id="lsMultiSelectControl">
+  <div class="form-group">
+    <ls2-multi-select-item *ngFor="let item of firstViewItems" [dataItem]="item">
+    </ls2-multi-select-item>
+  </div>
+  <div>
+    <button type="button" (click)="showMoreModal.open()" class="btn btn-info">Show more</button>
+    <ls2-modal #showMoreModal>
+      <div class="form-group">
+        <ls2-multi-select-item *ngFor="let item of restViewItems" [dataItem]="item">
+        </ls2-multi-select-item>
+      </div>
+    </ls2-modal>
+  </div>
+</div>
