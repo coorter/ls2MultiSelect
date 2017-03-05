@@ -26,7 +26,7 @@ export class Ls2MultiSelectItemComponent {
   }
 
 
-  private selecttionChanged(event: any): void {
+  private selectionChanged(event: any): void {
     this.isSelected = !this.isSelected;
     this.isSelectedChanged.next(this.isSelected);
   }

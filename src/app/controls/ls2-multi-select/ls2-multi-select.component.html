@@ -1,13 +1,21 @@
 <div id="lsMultiSelectControl">
+  <h2>C: {{maxDepth}}</h2>
   <div class="form-group">
-    <ls2-multi-select-item *ngFor="let item of firstViewItems" [dataItem]="item">
+    <ls2-multi-select-item *ngFor="let item of firstViewItems" 
+        [dataItem]="item"
+        [isSelected]="isSelected(item)"
+        (isSelectedChanged)="onItemIsSelectedChanged(item, $event)">        
     </ls2-multi-select-item>
   </div>
   <div>
     <button type="button" (click)="showMoreModal.open()" class="btn btn-info">Show more</button>
+    <button type="button" (click)="clearAll()" class="btn btn-info">Clear all</button>
     <ls2-modal #showMoreModal>
       <div class="form-group">
-        <ls2-multi-select-item *ngFor="let item of restViewItems" [dataItem]="item">
+        <ls2-multi-select-item *ngFor="let item of restViewItems" 
+            [dataItem]="item"
+            [isSelected]="isSelected(item)"
+            (isSelectedChanged)="onItemIsSelectedChanged(item, $event)">
         </ls2-multi-select-item>
       </div>
     </ls2-modal>

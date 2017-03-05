@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { Ls2MultiSelectOptions } from './controls/ls2-multi-select/ls2-multi-select-options';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -48,4 +50,23 @@ export class AppComponent {
       model: "Passat"
     }
   ];
+
+
+  options: Ls2MultiSelectOptions;
+
+  selectedItems: any[] = [];
+
+
+  onSelectedItemChanged(arg: any): void {
+    if (arg.isSelected) {
+      this.selectedItems.push(arg.item);
+    } else {
+      this.selectedItems.splice(this.selectedItems.indexOf(arg.item), 1);
+    }
+  }
+
+  constructor(){
+    this.options = new Ls2MultiSelectOptions();
+    this.options.maxDepth = 4;
+  }
 }
