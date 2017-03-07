@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { ControlsModule } from './controls/controls.module';
+import { ControlsModule } from './../multiSelect';
 
 @NgModule({
   declarations: [

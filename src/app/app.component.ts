@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Ls2MultiSelectOptions } from './controls/ls2-multi-select/ls2-multi-select-options';
+import { Ls2MultiSelectOptions } from './../multiSelect';
 
 @Component({
   selector: 'app-root',

@@ -9,7 +9,7 @@
   </div>
   <div>
     <button type="button" (click)="showMoreModal.open()" class="btn btn-info">Show more</button>
-    <button type="button" (click)="clearAll()" class="btn btn-info">Clear all</button>
+    <button type="button" (click)="clearAll()" class="btn btn-info pull-right">Clear all</button>
     <ls2-modal #showMoreModal>
       <div class="form-group">
         <ls2-multi-select-item *ngFor="let item of restViewItems" 
